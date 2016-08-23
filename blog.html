@@ -1,0 +1,40 @@
+---
+title: Blog
+permalink: /blog/
+order: 2
+---
+
+
+<div class="blog">
+
+  <div class="sub-header">
+    <p>
+      Hey, here I just write things that I happened in my daily life, either developing or designing something.
+    </p>
+  </div>
+
+  <div class="wrapper">
+
+    <div class="posts">
+      {% for post in site.posts %}
+        <article class="..." vocab="http://schema.org/" typeof="TechArticle">
+          <div>
+            <h2>
+              <a property="url" href="{{ post.url | prepend: site.baseurl }}" rel="bookmark" title="{{ post.title | escape }}" class="post-link">
+                <span property="name">{{ post.title | escape }}</span>
+              </a>
+            </h2>
+
+            <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+
+            <p>{{ post.excerpt }}</p>
+
+            <a href="{{ post.url | prepend: site.baseurl }}" class="cr">Read more...</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>

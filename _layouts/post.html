@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="single-post">
+
+      <header class="header-post" role="banner">
+        <div class="wrapper">
+          
+          <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
+
+          {% if page.date %}
+            <div class="post-meta">
+              <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="date">{{ page.date | date_to_string }}</time>
+            </div>
+          {% endif %}
+
+          <p itemprop="description" class="subtitle">{{ page.description }}</p>
+        </div>
+      </header>
+
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
+
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

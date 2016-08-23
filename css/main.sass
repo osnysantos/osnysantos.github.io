@@ -1,0 +1,366 @@
+---
+---
+@charset "utf-8"
+@import "normalize.css"
+
+// Variables
+$lightGreen: #50E3C2
+$linkColor: #666
+$linkColorActive: #1F9077
+$lightGray: #F8F8F8
+
+$screen-sm-min: 768px
+$screen-xs-max: ($screen-sm-min - 1)
+$screen-md-min: 992px
+$screen-sm-max: ($screen-md-min - 1)
+$screen-lg-min: 1200px
+$screen-md-max: ($screen-lg-min - 1)
+
+// Social media colors
+$twitter: #00aced
+$linkedin: #007bb6
+$dribbble: #ea4c89
+$github: #000
+
+
+// ---------------------------------
+// 
+body
+  border-top: 5px solid $lightGreen
+  font: 1.1em/1.5 "Proxima Nova", "Montserrat", "Helvetica Neue", Arial, sans-serif
+  color: #777
+
+  a
+    color: $linkColorActive
+    text-decoration: none
+
+    &:hover
+      color: darken($linkColorActive, 10%)
+
+    &:active
+      background-color: #FBFFC5
+
+
+.wrapper
+
+  @media (min-width: $screen-md-min)
+    width: 800px
+    margin: 0 auto
+
+header
+  padding: 15px 20px
+  border-bottom: 1px solid #eee
+  @media (min-width: $screen-sm-min)
+    padding: 20px 0
+
+  .social-links
+    display: none
+    padding: 0
+    margin-top: -2px
+
+    @media (min-width: $screen-sm-min)
+      display: block
+      float: right
+
+    a
+      fill: #888
+      margin: 0 4px
+      width: 26px
+      height: 26px
+      display: inline-block
+
+    a.github:hover
+      fill: $github
+      
+    a.twitter:hover
+      fill: $twitter
+      
+    a.dribbble:hover
+      fill: $dribbble
+
+    a.linkedin:hover
+      fill: $linkedin
+
+    svg
+      max-width: 100%
+      max-height: 100%
+
+    .bigger
+      width: 28px
+      height: 28px
+
+    span
+      display: none
+
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    text-align: center
+    @media (min-width: $screen-sm-min)
+      text-align: left
+
+    li
+      display: inline-block
+      padding: 0 8px
+
+      &.active a
+        font-weight: 600
+        color: $linkColorActive
+
+
+  nav
+    text-transform: uppercase
+    font-weight: 100
+
+    a
+      padding: 5px
+      border-radius: 4px
+      text-decoration: none
+      color: #888
+
+
+
+.page-content
+  text-align: center
+  
+  @media (min-width: $screen-sm-min)
+    font-size: 1.2em
+
+  a
+    color: $linkColorActive
+    text-decoration: none
+
+    &:hover
+      color: darken($linkColorActive, 10%)
+
+.about
+  padding: 20px
+  @media (min-width: $screen-sm-min)
+    max-width: 700px
+    margin: 0 auto
+
+  .profile
+    max-width: 120px
+    margin-top: 10px
+
+    @media (min-width: $screen-sm-min)
+      max-width: 167px
+      float: left
+      margin-right: 40px
+      margin-top: 30px
+
+  @media (min-width: $screen-sm-min)
+    .text
+      margin-left: 220px
+      text-align: left
+
+  p
+    font-size: 0.9em
+
+  h2
+    font-weight: normal
+    font-size: 1.8em
+    margin-top: 15px
+
+    @media (min-width: $screen-sm-min)
+      margin-top: 20px
+      margin-bottom: 20px
+      font-size: 2em
+
+    .greeting
+      display: block
+      font-size: 0.7em
+      color: #999
+      @media (min-width: $screen-sm-min)
+        display: inline
+        font-size: 1em
+        color: #777
+
+    strong
+      font-weight: 600
+      color: $linkColorActive
+
+  h1
+    font-weight: normal
+    font-size: 1.1em
+
+.blog
+  .sub-header
+    background-color: #f9f9f9
+    padding: 25px 15px
+    text-align: center
+    font-style: italic
+    font-weight: 100
+    font-size: 1em
+    color: #999
+
+    @media (min-width: $screen-sm-min)
+      padding: 25px
+      font-size: 1.1em
+
+    p
+      margin: 0
+      padding: 0
+
+      @media (min-width: $screen-sm-min)
+        max-width: 600px
+        margin: 0 auto
+
+  .posts
+    padding: 10px 20px
+    text-align: left
+
+    article
+      padding: 25px 0
+      border-bottom: 1px solid $lightGreen
+
+      &:last-child
+        border-bottom: 0
+
+      @media (min-width: $screen-sm-min)
+        padding: 40px 0
+
+        div
+          max-width: 650px
+          margin: 0 auto
+
+    .post-meta
+      margin-top: 15px
+      color: #999
+      font-size: 0.9em
+
+  h2
+    margin: 0
+    padding: 0
+    line-height: 120%
+
+    @media (min-width: $screen-sm-min)
+      line-height: 130%
+
+    a
+      font-weight: 800
+      font-size: 1em
+
+      @media (min-width: $screen-sm-min)
+        font-size: 1.4em
+
+.single-post
+  h1
+    font-size: 1.7em
+    color: #fff
+    font-weight: 800
+    line-height: 130%
+    text-align: center
+    
+    @media (min-width: $screen-sm-min)
+      font-size: 2.5em
+
+  .post-meta
+    text-align: center
+
+  .page-content
+    text-align: left
+    font-size: 1em
+
+  header
+    background-color: $linkColorActive
+    color: #fff
+
+  main
+    padding: 0 20px
+    margin: 35px 0 50px 0
+
+    .wrapper
+      max-width: 650px
+      font-size: 1.1em
+    
+    .gist
+      margin: 25px 0 35px 0
+
+    p
+      margin: 30px 0
+
+    a
+      border-bottom: 1px solid $lightGreen
+
+footer
+  background-color: $lightGray
+  padding: 35px 20px
+  text-align: center
+  margin-top: 30px
+
+  p.title
+    margin: 0
+    font-weight: 100
+    font-size: 1.5em
+
+    @media (min-width: $screen-sm-min)
+      font-size: 2.1em
+      padding: 0 0 15px 0
+
+  .footer-box
+    border-bottom: 1px solid  #D1D1D1
+    padding-bottom: 15px
+
+    @media (min-width: $screen-sm-min)
+      padding-bottom: 30px
+
+    p
+      @media (min-width: $screen-sm-min)
+        margin: 0
+        max-width: 550px
+        margin: 15px auto
+
+
+.social-links-bar
+  padding-top: 30px
+  border-top: 2px solid  #fff
+  
+  @media (min-width: $screen-sm-min)
+    padding-top: 35px
+
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    text-align: center
+
+    span
+      display: block
+
+    a
+      display: inline-block
+      width: 23%
+      line-height: 120%
+      font-size: 0.8em
+      opacity: 0.75
+      color: #666
+      font-weight: 100
+
+      @media (min-width: $screen-sm-min)
+        font-size: 1em
+        max-width: 100px
+
+      &.github
+        fill: $github
+
+      &.twitter
+        fill: $twitter
+
+      &.dribbble
+        fill: $dribbble
+
+      &.linkedin
+        fill: $linkedin
+
+    a:hover
+      opacity: 1
+
+    svg
+      width: 32px
+      height: 32px
+
+      @media (min-width: $screen-sm-min)
+        width: 50px
+        height: 50px
