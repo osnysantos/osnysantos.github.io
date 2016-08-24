@@ -1,0 +1,17 @@
+{% if page.comments %}
+  <div class="wrapper">
+    <section class="comment-box">
+      <h3>Comentários</h3>
+      <div id="disqus_thread"></div>
+    </section>
+
+    <script>
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//www-osny-me.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+  </div>
+{% endif %}

@@ -33,6 +33,7 @@ defaults:
     values:
       layout: "post"
       permalink: /blog/:title
+      comments: true
 
 
 # Build settings
