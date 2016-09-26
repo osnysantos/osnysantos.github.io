@@ -1,6 +1,6 @@
 ---
 title:  "Simple auth using Express and Node"
-date:   2016-09-22 09:28:00 -0300
+date:   2016-09-25 09:28:00 -0300
 categories: node express
 ---
 
