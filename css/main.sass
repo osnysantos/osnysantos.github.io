@@ -49,7 +49,7 @@ body
     margin: 0 auto
 
 header
-  padding: 15px 20px
+  padding: 15px 0
   border-bottom: 1px solid #eee
   @media (min-width: $screen-sm-min)
     padding: 20px 0
@@ -103,7 +103,9 @@ header
 
     li
       display: inline-block
-      padding: 0 8px
+      padding: 0 4px
+      @media (min-width: $screen-sm-min)
+        padding: 0 8px
 
       &.active a
         font-weight: 600
@@ -289,6 +291,26 @@ header
 
     a
       border-bottom: 1px solid $lightGreen
+
+    img
+      margin-left: -100px
+
+    hr
+      padding: 0
+      border: none
+      border-top: medium double #ccc
+      color: #999
+      text-align: center
+      margin: 45px 0
+      
+      &:after
+        content: "§"
+        display: inline-block
+        position: relative
+        top: -0.7em
+        font-size: 1em
+        padding: 0 1em
+        background: white
 
 footer
   background-color: $lightGray
