@@ -3,6 +3,7 @@
 @charset "utf-8"
 @import "normalize.css"
 @import "syntax.css"
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600')
 
 // Variables
 $lightGreen: #50E3C2
@@ -28,7 +29,7 @@ $github: #000
 // 
 body
   border-top: 5px solid $lightGreen
-  font: 1.1em/1.5 "Proxima Nova", "Montserrat", "Helvetica Neue", Arial, sans-serif
+  font: 1.1em/1.5 "Source Sans Pro", "Montserrat", "Helvetica Neue", Arial, sans-serif
   color: #777
 
   a
@@ -392,3 +393,71 @@ footer
       @media (min-width: $screen-sm-min)
         width: 50px
         height: 50px
+
+.work
+
+  img
+    width: auto
+    max-width: 100%
+
+  .work-block
+    padding-top: 35px
+    border-bottom: 1px solid #ddd
+    
+    @media (min-width: $screen-sm-min)
+      padding-top: 80px
+
+    img
+      margin-top: 20px
+
+    h2
+      margin: 0
+      font-weight: bold
+      font-size: 25px
+      color: #333
+      @media (min-width: $screen-sm-min)
+        font-weight: 100
+        font-size: 50px
+
+    h3
+      margin: 0
+      font-weight: 100
+
+  .quintal
+    background-color: #f9f9f9
+    // background-color: #B8E986
+
+  .conpedi
+    background-color: #000
+
+  .cimm
+    background-color: #c00
+
+  .next-project
+    padding: 40px 0 20px 0
+    max-width: 600px
+    margin: 0 auto
+
+    p.title
+      margin: 0
+      padding: 0
+      font-size: 32px
+      color: $linkColorActive
+
+    strong
+      font-weight: 600
+
+  .view-project
+    text-align: center
+    margin: 15px 30px 0 30px
+
+    a, a:visited
+      padding: 10px
+      color: #777
+      border-radius: 3px
+      display: block
+      max-width: 120px
+      margin: 0 auto
+
+    a:hover
+      background-color: rgba(255, 255, 255, 0.2)
